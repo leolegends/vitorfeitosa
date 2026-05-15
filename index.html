@@ -1,0 +1,763 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+  :root{
+    --black:#0a0a08;
+    --off:#f0ede6;
+    --cream:#e8e3d8;
+    --lime:#c8f23c;
+    --lime-d:#a8d420;
+    --mid:#3a3a36;
+    --muted:#8a8778;
+    --red:#e03a2f;
+  }
+
+  body{
+    font-family:'DM Sans',sans-serif;
+    background:var(--black);
+    color:var(--off);
+    overflow-x:hidden;
+  }
+
+  /* ── NAV ── */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:200;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 48px;
+    border-bottom:1px solid rgba(240,237,230,0.07);
+    background:rgba(10,10,8,0.88);
+    backdrop-filter:blur(16px);
+  }
+  .logo{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:.14em;color:var(--off)}
+  .logo b{color:var(--lime);font-weight:400}
+  .nav-links{display:flex;gap:32px;list-style:none}
+  .nav-links a{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
+  .nav-links a:hover{color:var(--off)}
+  .nav-cta{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;background:var(--lime);color:var(--black);border:none;padding:10px 22px;cursor:pointer;transition:background .2s;text-decoration:none;display:inline-block}
+  .nav-cta:hover{background:var(--lime-d)}
+
+  /* ── HERO ── */
+  .hero{
+    min-height:100vh;
+    padding-top:72px;
+    position:relative;
+    overflow:hidden;
+  }
+
+  /* text overlay */
+  .hero-left{
+    display:flex;flex-direction:column;justify-content:center;
+    padding:80px 0 80px 48px;
+    position:relative;z-index:2;
+    min-height:100vh;
+    max-width:620px;
+  }
+
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--lime);margin-bottom:28px;
+    animation:fadeUp .5s ease both;
+  }
+  .eyebrow::before{content:'';width:28px;height:1px;background:var(--lime)}
+
+  .hero-h1{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:clamp(74px,9vw,118px);
+    line-height:.9;letter-spacing:.02em;
+    margin-bottom:32px;
+    animation:fadeUp .6s .1s ease both;
+  }
+  .hero-h1 .solid{color:var(--off);display:block}
+  .hero-h1 .lime{color:var(--lime);display:block}
+  .hero-h1 .ghost{
+    display:block;
+    -webkit-text-stroke:1.5px rgba(240,237,230,.35);
+    color:transparent;
+  }
+
+  .hero-desc{
+    font-size:15px;font-weight:300;color:var(--muted);line-height:1.75;
+    max-width:380px;margin-bottom:40px;
+    animation:fadeUp .6s .2s ease both;
+  }
+  .hero-desc strong{color:var(--off);font-weight:500}
+
+  .hero-btns{
+    display:flex;align-items:center;gap:16px;
+    animation:fadeUp .6s .3s ease both;
+  }
+  .btn-p{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;background:var(--lime);color:var(--black);border:none;padding:15px 32px;cursor:pointer;transition:background .2s,transform .15s;text-decoration:none;display:inline-block}
+  .btn-p:hover{background:var(--lime-d);transform:translateY(-1px)}
+  .btn-g{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);background:none;border:1px solid rgba(240,237,230,.18);padding:15px 28px;cursor:pointer;text-decoration:none;transition:border-color .2s,color .2s;display:inline-block}
+  .btn-g:hover{border-color:var(--off);color:var(--off)}
+
+  .hero-stats{
+    display:flex;gap:40px;margin-top:56px;
+    padding-top:36px;border-top:1px solid rgba(240,237,230,.09);
+    animation:fadeUp .6s .4s ease both;
+  }
+  .stat-n{font-family:'Bebas Neue',sans-serif;font-size:40px;line-height:1;color:var(--off)}
+  .stat-n span{color:var(--lime)}
+  .stat-l{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+
+  /* ── PHOTO PANEL ── */
+  .hero-photo{
+    position:absolute;inset:0;width:100%;height:100%;
+    background:var(--mid);
+  }
+
+  /* real photo */
+  .photo-img{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;object-position:center top;
+    filter:grayscale(18%) contrast(1.06) brightness(.75);
+    transition:filter .6s;
+  }
+  .hero-photo:hover .photo-img{filter:grayscale(0%) contrast(1.08) brightness(.82)}
+
+  /* gradient: escuro esquerda (legibilidade do texto) + bottom */
+  .photo-overlay{
+    position:absolute;inset:0;
+    background:
+      linear-gradient(to right,rgba(10,10,8,.92) 0%,rgba(10,10,8,.72) 38%,rgba(10,10,8,.3) 60%,rgba(10,10,8,.05) 100%),
+      linear-gradient(to bottom,rgba(10,10,8,.25) 0%,transparent 40%,rgba(10,10,8,.7) 100%);
+    pointer-events:none;
+  }
+
+  /* lime strip on right edge */
+  .photo-accent-line{
+    position:absolute;right:0;top:0;bottom:0;
+    width:3px;background:var(--lime);
+  }
+
+  /* floating label top-right */
+  .photo-badge-tr{
+    position:absolute;top:36px;right:0;
+    background:var(--lime);
+    padding:10px 18px 10px 14px;
+    display:flex;flex-direction:column;gap:1px;
+  }
+  .badge-sup{font-size:9px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(10,10,8,.55)}
+  .badge-main{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:.1em;color:var(--black)}
+
+  /* bottom text area over photo — right side only */
+  .photo-bottom{
+    position:absolute;bottom:0;right:0;left:50%;
+    padding:32px 48px;
+    display:flex;flex-direction:column;gap:16px;
+    align-items:flex-end;text-align:right;
+  }
+
+  /* big ghost text overlapping */
+  .photo-ghost-title{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:clamp(52px,6vw,80px);
+    line-height:.9;letter-spacing:.04em;
+    -webkit-text-stroke:1px rgba(200,242,60,.5);
+    color:transparent;
+    user-select:none;
+  }
+
+  /* credential pill */
+  .photo-cred{
+    display:flex;align-items:center;gap:12px;
+    background:rgba(10,10,8,.75);
+    backdrop-filter:blur(8px);
+    border:1px solid rgba(200,242,60,.2);
+    padding:12px 16px;
+    width:fit-content;
+  }
+  .cred-dot{width:8px;height:8px;background:var(--lime);border-radius:50%;flex-shrink:0}
+  .cred-text{font-size:12px;font-weight:300;color:var(--off);letter-spacing:.04em}
+  .cred-text strong{font-weight:500}
+
+  /* floating stat chip — absolute positioned */
+  .photo-chip{
+    position:absolute;
+    background:var(--black);
+    border:1px solid rgba(200,242,60,.3);
+    padding:14px 18px;
+    display:flex;flex-direction:column;gap:2px;
+    z-index:3;
+  }
+  .chip-n{font-family:'Bebas Neue',sans-serif;font-size:32px;line-height:1;color:var(--lime)}
+  .chip-l{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+  .chip-1{top:180px;right:48px;animation:fadeUp .7s .5s ease both}
+  .chip-2{top:310px;right:48px;animation:fadeUp .7s .65s ease both}
+
+  /* ── MARQUEE ── */
+  .marquee-wrap{
+    overflow:hidden;
+    border-top:1px solid rgba(240,237,230,.07);
+    border-bottom:1px solid rgba(240,237,230,.07);
+    background:rgba(200,242,60,.03);
+    padding:12px 0;
+  }
+  .marquee-track{
+    display:flex;gap:56px;white-space:nowrap;
+    animation:marquee 24s linear infinite;width:max-content;
+  }
+  .marquee-item{
+    font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--muted);display:flex;align-items:center;gap:14px;
+  }
+  .marquee-item::before{content:'◆';color:var(--lime);font-size:7px}
+
+  /* ── DOR ── */
+  .section-pain{
+    padding:100px 48px;
+    display:grid;grid-template-columns:1fr 1fr;gap:80px;
+    border-bottom:1px solid rgba(240,237,230,.07);
+  }
+  .sec-label{
+    font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--lime);font-weight:500;margin-bottom:20px;
+    display:flex;align-items:center;gap:12px;
+  }
+  .sec-label::before{content:'';width:28px;height:1px;background:var(--lime)}
+  .pain-title{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:clamp(42px,5vw,72px);line-height:.94;letter-spacing:.02em;
+  }
+  .pain-title em{color:var(--lime);font-style:normal}
+  .pain-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-top:20px}
+  .pain-item{
+    display:flex;align-items:flex-start;gap:14px;padding:18px;
+    border:1px solid rgba(240,237,230,.07);transition:border-color .2s;
+  }
+  .pain-item:hover{border-color:rgba(200,242,60,.3)}
+  .pain-x{
+    width:28px;height:28px;flex-shrink:0;
+    background:rgba(224,58,47,.12);border:1px solid rgba(224,58,47,.3);
+    display:flex;align-items:center;justify-content:center;
+    font-size:12px;color:var(--red);
+  }
+  .pain-text{font-size:13px;font-weight:300;color:var(--muted);line-height:1.65}
+  .pain-text strong{color:var(--off);font-weight:500}
+
+  /* ── PARA VOCÊ ── */
+  .section-qualify{
+    padding:100px 48px;
+    background:rgba(200,242,60,.04);
+    border-bottom:1px solid rgba(240,237,230,.07);
+  }
+  .qualify-inner{max-width:880px;margin:0 auto}
+  .qualify-title{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:clamp(42px,5vw,70px);line-height:.94;margin-bottom:48px;
+  }
+  .qualify-title em{color:var(--lime);font-style:normal}
+  .qualify-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .qualify-item{
+    display:flex;align-items:center;gap:14px;padding:16px 20px;
+    border:1px solid rgba(200,242,60,.18);background:rgba(200,242,60,.04);
+  }
+  .qualify-check{
+    width:24px;height:24px;flex-shrink:0;
+    background:var(--lime);
+    display:flex;align-items:center;justify-content:center;
+    font-size:12px;color:var(--black);font-weight:700;
+  }
+  .qualify-text{font-size:13px;font-weight:300;color:var(--off);line-height:1.5}
+
+  /* ── MÉTODO ── */
+  .section-method{padding:100px 48px;background:var(--off);color:var(--black)}
+  .sec-label-dark{
+    font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+    color:rgba(10,10,8,.35);margin-bottom:14px;
+    display:flex;align-items:center;gap:12px;
+  }
+  .sec-label-dark::before{content:'';width:28px;height:1px;background:rgba(10,10,8,.35)}
+  .method-title{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:clamp(48px,6vw,82px);line-height:.94;margin-bottom:8px;
+  }
+  .method-subtitle{font-size:13px;font-weight:300;color:rgba(10,10,8,.45);margin-bottom:48px;letter-spacing:.04em}
+  .method-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2px}
+  .step{background:var(--cream);padding:36px 28px;position:relative;overflow:hidden;transition:background .25s}
+  .step:hover{background:var(--black)}
+  .step:hover .sn{color:var(--lime)}
+  .step:hover .st{color:var(--off)}
+  .step:hover .sd{color:var(--muted)}
+  .sn{
+    font-family:'Bebas Neue',sans-serif;font-size:60px;line-height:1;
+    color:rgba(10,10,8,.07);position:absolute;top:18px;right:20px;transition:color .25s;
+  }
+  .st{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:.04em;color:var(--black);margin-bottom:10px;position:relative;transition:color .25s}
+  .sd{font-size:13px;font-weight:300;color:rgba(10,10,8,.5);line-height:1.7;position:relative;transition:color .25s}
+
+  /* ── DEPOIMENTOS ── */
+  .section-testimonials{
+    padding:100px 48px;
+    border-top:1px solid rgba(240,237,230,.07);
+    border-bottom:1px solid rgba(240,237,230,.07);
+  }
+  .testimonials-header{
+    display:flex;align-items:flex-end;justify-content:space-between;
+    margin-bottom:48px;
+  }
+  .testimonials-title{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:clamp(42px,5vw,68px);line-height:.94;
+  }
+  .google-badge{
+    display:flex;align-items:center;gap:10px;
+    padding:12px 20px;
+    border:1px solid rgba(240,237,230,.12);
+    background:rgba(240,237,230,.04);
+  }
+  .google-stars{color:var(--lime);font-size:14px;letter-spacing:2px}
+  .google-text{font-size:11px;color:var(--muted);letter-spacing:.06em}
+  .google-text strong{color:var(--off);font-weight:500;display:block}
+  .testimonials-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px}
+  .tcard{
+    padding:36px;
+    border:1px solid rgba(240,237,230,.07);
+    transition:border-color .2s;
+  }
+  .tcard:hover{border-color:rgba(200,242,60,.25)}
+  .tcard-quote{
+    font-size:15px;font-weight:300;color:var(--off);line-height:1.75;
+    margin-bottom:24px;font-style:italic;
+  }
+  .tcard-quote em{color:var(--lime);font-style:normal;font-weight:500}
+  .tcard-attr{display:flex;align-items:center;gap:14px}
+  .tcard-av{
+    width:40px;height:40px;background:var(--lime);flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Bebas Neue',sans-serif;font-size:16px;color:var(--black);
+  }
+  .tcard-name{font-size:13px;font-weight:500;color:var(--off)}
+  .tcard-result{font-size:11px;color:var(--lime);font-weight:400;margin-top:2px;letter-spacing:.04em}
+
+  /* ── PROVA ── */
+  .section-proof{
+    padding:100px 48px;
+    display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
+    border-top:1px solid rgba(240,237,230,.07);
+  }
+  .proof-q{font-family:'Bebas Neue',sans-serif;font-size:clamp(30px,4vw,50px);line-height:1.05;letter-spacing:.02em}
+  .proof-q .hl{color:var(--lime)}
+  .proof-attr{margin-top:28px;display:flex;align-items:center;gap:14px}
+  .proof-av{
+    width:44px;height:44px;background:var(--lime);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Bebas Neue',sans-serif;font-size:18px;color:var(--black);flex-shrink:0;
+  }
+  .proof-name{font-size:13px;font-weight:500}
+  .proof-role{font-size:11px;color:var(--muted);font-weight:300}
+  .metrics{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+  .metric{background:var(--mid);padding:28px}
+  .metric.lime-bg{background:var(--lime)}
+  .mv{font-family:'Bebas Neue',sans-serif;font-size:48px;line-height:1;letter-spacing:.04em;color:var(--lime)}
+  .metric.lime-bg .mv{color:var(--black)}
+  .ml{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:6px;font-weight:300}
+  .metric.lime-bg .ml{color:rgba(10,10,8,.5)}
+
+  /* ── LOCALIZAÇÃO ── */
+  .section-local{
+    padding:80px 48px;
+    display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;
+    border-top:1px solid rgba(240,237,230,.07);
+    background:rgba(240,237,230,.02);
+  }
+  .local-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(38px,4vw,56px);line-height:.95;margin-bottom:24px}
+  .local-address{font-size:14px;font-weight:300;color:var(--muted);line-height:1.9;margin-bottom:28px}
+  .local-address strong{color:var(--off);font-weight:500;display:block;font-size:15px;margin-bottom:4px}
+  .local-social{display:flex;gap:12px;flex-wrap:wrap}
+  .social-pill{
+    font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+    padding:9px 18px;border:1px solid rgba(240,237,230,.18);
+    color:var(--muted);text-decoration:none;transition:border-color .2s,color .2s;
+  }
+  .social-pill:hover{border-color:var(--lime);color:var(--lime)}
+  .map-placeholder{
+    background:var(--mid);
+    height:320px;
+    display:flex;align-items:center;justify-content:center;
+    position:relative;overflow:hidden;
+  }
+  .map-placeholder iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(80%) contrast(1.1) brightness(.7)}
+
+  /* ── CTA ── */
+  .section-cta{padding:100px 48px;text-align:center;position:relative;overflow:hidden}
+  .cta-bg{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:clamp(80px,18vw,220px);line-height:.85;letter-spacing:.04em;
+    color:rgba(240,237,230,.025);
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    white-space:nowrap;user-select:none;pointer-events:none;
+  }
+  .cta-tag{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--lime);margin-bottom:20px}
+  .cta-title{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:clamp(52px,8vw,100px);line-height:.93;letter-spacing:.02em;
+    margin-bottom:20px;position:relative;
+  }
+  .cta-sub{font-size:15px;font-weight:300;color:var(--muted);max-width:440px;margin:0 auto 40px;position:relative;line-height:1.7}
+  .cta-sub strong{color:var(--off);font-weight:500}
+  .cta-btns{display:flex;align-items:center;justify-content:center;gap:14px;position:relative}
+  .cta-note{font-size:11px;color:var(--muted);margin-top:18px;font-weight:300;letter-spacing:.04em}
+
+  /* ── FOOTER ── */
+  footer{
+    padding:36px 48px;
+    border-top:1px solid rgba(240,237,230,.07);
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .footer-links{display:flex;gap:24px;list-style:none}
+  .footer-links a{font-size:11px;color:var(--muted);text-decoration:none;letter-spacing:.08em;transition:color .2s}
+  .footer-links a:hover{color:var(--lime)}
+  .footer-copy{font-size:11px;color:var(--muted);font-weight:300}
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes slideIn{from{opacity:0;transform:translateX(-20px)}to{opacity:1;transform:translateX(0)}}
+  @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+</style>
+
+<nav>
+  <div class="logo">VITOR<b>.</b>FEITOSA</div>
+  <ul class="nav-links">
+    <li><a href="#metodo">Método</a></li>
+    <li><a href="#para-voce">Para Você</a></li>
+    <li><a href="#resultados">Resultados</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <a class="nav-cta" href="https://wa.me/5511984585259?text=Ol%C3%A1%20Vitor!%20Quero%20agendar%20minha%20consulta." target="_blank" rel="noopener">Agendar Consulta</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+
+  <div class="hero-left">
+    <div class="eyebrow">Nutricionista Esportivo · 20 Anos</div>
+    <h1 class="hero-h1">
+      <span class="solid">SEU</span>
+      <span class="lime">SHAPE</span>
+      <span class="ghost">POSSÍVEL</span>
+    </h1>
+    <p class="hero-desc">
+      Perda de gordura e ganho de massa com <strong>estratégia real</strong> — não com dietas genéricas. Só atendo quem treina ou pretende treinar.
+    </p>
+    <div class="hero-btns">
+      <a class="btn-p" href="https://wa.me/5511984585259?text=Ol%C3%A1%20Vitor!%20Quero%20come%C3%A7ar%20meu%20acompanhamento%20nutricional." target="_blank" rel="noopener">Quero Começar</a>
+      <a href="#resultados" class="btn-g">Ver Resultados</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-n">20<span>+</span></div>
+        <div class="stat-l">Anos de Atuação</div>
+      </div>
+      <div>
+        <div class="stat-n">250<span>+</span></div>
+        <div class="stat-l">Avaliações Google</div>
+      </div>
+      <div>
+        <div class="stat-n">2<span>em1</span></div>
+        <div class="stat-l">Nutrição + Ed. Física</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHOTO PANEL -->
+  <div class="hero-photo">
+
+    <!-- real photo -->
+    <img
+      class="photo-img"
+      src="https://static-media.hotmart.com/blo_3JXVO2zOhLMdrYVaTgJVZjc=/filters:quality(100)/klickart-prod/uploads/media/file/10235666/vitor_comp.jpg"
+      alt="Vitor Feitosa — Nutricionista Esportivo"
+    />
+
+    <!-- overlays -->
+    <div class="photo-overlay"></div>
+    <div class="photo-accent-line"></div>
+
+    <!-- badge topo direita -->
+    <div class="photo-badge-tr">
+      <span class="badge-sup">Especialista em</span>
+      <span class="badge-main">Nutrição Esportiva</span>
+    </div>
+
+    <!-- chips flutuantes à esquerda -->
+    <div class="photo-chip chip-1">
+      <div class="chip-n">20<span style="font-size:18px;color:var(--off)">+</span></div>
+      <div class="chip-l">Anos de Clínica</div>
+    </div>
+    <div class="photo-chip chip-2">
+      <div class="chip-n">⭐<span style="font-size:18px;color:var(--off)">5.0</span></div>
+      <div class="chip-l">250+ Avaliações</div>
+    </div>
+
+    <!-- bottom overlay com ghost text + credencial -->
+    <div class="photo-bottom">
+      <div class="photo-ghost-title">VITOR<br>FEITOSA</div>
+      <div class="photo-cred">
+        <div class="cred-dot"></div>
+        <div class="cred-text"><strong>CRN + CREF Ativos</strong> · Nutricionista & Educador Físico</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">Perda de Gordura</span>
+    <span class="marquee-item">Ganho de Massa</span>
+    <span class="marquee-item">Método Hércules</span>
+    <span class="marquee-item">Avaliação Física Completa</span>
+    <span class="marquee-item">Plano Alimentar Personalizado</span>
+    <span class="marquee-item">Suplementação Inteligente</span>
+    <span class="marquee-item">Periodização Nutricional</span>
+    <span class="marquee-item">Nutrição Esportiva</span>
+    <span class="marquee-item">Perda de Gordura</span>
+    <span class="marquee-item">Ganho de Massa</span>
+    <span class="marquee-item">Método Hércules</span>
+    <span class="marquee-item">Avaliação Física Completa</span>
+    <span class="marquee-item">Plano Alimentar Personalizado</span>
+    <span class="marquee-item">Suplementação Inteligente</span>
+    <span class="marquee-item">Periodização Nutricional</span>
+    <span class="marquee-item">Nutrição Esportiva</span>
+  </div>
+</div>
+
+<!-- DOR -->
+<section class="section-pain">
+  <div>
+    <div class="sec-label">Você se identifica?</div>
+    <h2 class="pain-title">ESSES<br>PROBLEMAS<br><em>ACABAM</em><br>AQUI</h2>
+  </div>
+  <ul class="pain-list">
+    <li class="pain-item">
+      <div class="pain-x">✕</div>
+      <p class="pain-text"><strong>Treina pesado mas não vê o músculo crescer.</strong> Você se dedica na academia, mas o espelho não mostra o esforço.</p>
+    </li>
+    <li class="pain-item">
+      <div class="pain-x">✕</div>
+      <p class="pain-text"><strong>Gastou dinheiro em suplementos</strong> sem saber a hora certa de tomar ou se estão funcionando de verdade.</p>
+    </li>
+    <li class="pain-item">
+      <div class="pain-x">✕</div>
+      <p class="pain-text"><strong>Quer perder gordura sem perder músculo.</strong> Esse equilíbrio tem método — e é exatamente o que fazemos.</p>
+    </li>
+    <li class="pain-item">
+      <div class="pain-x">✕</div>
+      <p class="pain-text"><strong>Tenta se alimentar certo</strong> mas não tem certeza se está no caminho correto para o seu objetivo específico.</p>
+    </li>
+  </ul>
+</section>
+
+<!-- PARA VOCÊ -->
+<section class="section-qualify" id="para-voce">
+  <div class="qualify-inner">
+    <div class="sec-label">Este atendimento é para você se…</div>
+    <h2 class="qualify-title">VOCÊ É O<br><em>PERFIL CERTO</em></h2>
+    <div class="qualify-grid">
+      <div class="qualify-item">
+        <div class="qualify-check">✓</div>
+        <span class="qualify-text">Treina na academia ou pretende começar a treinar</span>
+      </div>
+      <div class="qualify-item">
+        <div class="qualify-check">✓</div>
+        <span class="qualify-text">Quer ganhar massa muscular com método e progressão real</span>
+      </div>
+      <div class="qualify-item">
+        <div class="qualify-check">✓</div>
+        <span class="qualify-text">Busca perda de gordura sem sacrificar o músculo conquistado</span>
+      </div>
+      <div class="qualify-item">
+        <div class="qualify-check">✓</div>
+        <span class="qualify-text">Está cansado de dietas genéricas que não respeitam sua rotina</span>
+      </div>
+      <div class="qualify-item">
+        <div class="qualify-check">✓</div>
+        <span class="qualify-text">Quer entender como usar suplementação de forma inteligente</span>
+      </div>
+      <div class="qualify-item">
+        <div class="qualify-check">✓</div>
+        <span class="qualify-text">Precisa de um plano que funcione junto com sua rotina de treino</span>
+      </div>
+      <div class="qualify-item">
+        <div class="qualify-check">✓</div>
+        <span class="qualify-text">Está pronto para se comprometer com um processo sério de transformação</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTODO -->
+<section class="section-method" id="metodo">
+  <div class="sec-label-dark">Como funciona</div>
+  <h2 class="method-title">MÉTODO HÉRCULES</h2>
+  <p class="method-subtitle">5 etapas estruturadas para uma transformação sustentável</p>
+  <div class="method-grid">
+    <div class="step">
+      <div class="sn">01</div>
+      <div class="st">Diagnóstico</div>
+      <p class="sd">Conversa aprofundada sobre seus objetivos, hábitos, histórico alimentar e treinos — antes de qualquer plano ser montado.</p>
+    </div>
+    <div class="step">
+      <div class="sn">02</div>
+      <div class="st">Entrevista Pessoal</div>
+      <p class="sd">Mapeamento completo da sua rotina, preferências alimentares, restrições e estilo de vida para montar uma estratégia real.</p>
+    </div>
+    <div class="step">
+      <div class="sn">03</div>
+      <div class="st">Avaliação Física</div>
+      <p class="sd">Consulta de 1h30 com avaliação física completa. Métricas reais para uma estratégia real — sem chute, sem dieta pronta.</p>
+    </div>
+    <div class="step">
+      <div class="sn">04</div>
+      <div class="st">Plano Personalizado</div>
+      <p class="sd">Plano alimentar montado sob medida para agir em sinergia com o seu treino. Zero dieta genérica copiada da internet.</p>
+    </div>
+    <div class="step">
+      <div class="sn">05</div>
+      <div class="st">Aplicação do Método</div>
+      <p class="sd">Acompanhamento contínuo, ajustes periódicos e suporte direto para garantir aderência e resultados progressivos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="section-testimonials" id="resultados">
+  <div class="testimonials-header">
+    <div>
+      <div class="sec-label">O que dizem os pacientes</div>
+      <h2 class="testimonials-title">RESULTADOS<br>REAIS</h2>
+    </div>
+    <div class="google-badge">
+      <div>
+        <div class="google-stars">★★★★★</div>
+        <div class="google-text">
+          <strong>250+ Avaliações</strong>
+          5 estrelas no Google
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="testimonials-grid">
+    <div class="tcard">
+      <p class="tcard-quote">"Finalmente alguém que <em>entendeu meu corpo</em> e criou um plano que se encaixa na minha rotina. Resultados que nunca consegui antes em anos de academia."</p>
+      <div class="tcard-attr">
+        <div class="tcard-av">MC</div>
+        <div>
+          <div class="tcard-name">Marcos C.</div>
+          <div class="tcard-result">Perdeu 14kg em 4 meses · Ganhou 4kg de massa</div>
+        </div>
+      </div>
+    </div>
+    <div class="tcard">
+      <p class="tcard-quote">"Treino há anos e nunca consegui resultados tão consistentes. O Vitor entende de <em>treino e nutrição juntos</em> — faz toda a diferença na prática."</p>
+      <div class="tcard-attr">
+        <div class="tcard-av">RS</div>
+        <div>
+          <div class="tcard-name">Rodrigo S.</div>
+          <div class="tcard-result">Ganho muscular sustentável · Reduziu gordura corporal</div>
+        </div>
+      </div>
+    </div>
+    <div class="tcard">
+      <p class="tcard-quote">"Pensei que iria receber mais uma dieta restritiva. Recebi um <em>plano que faz sentido</em> com minha vida, meus treinos e minha rotina real."</p>
+      <div class="tcard-attr">
+        <div class="tcard-av">AF</div>
+        <div>
+          <div class="tcard-name">Ana F.</div>
+          <div class="tcard-result">Composição corporal transformada em 6 meses</div>
+        </div>
+      </div>
+    </div>
+    <div class="tcard">
+      <p class="tcard-quote">"A avaliação física completa me mostrou onde eu estava errando. Com o plano certo, <em>o resultado veio rápido</em> e de forma consistente."</p>
+      <div class="tcard-attr">
+        <div class="tcard-av">PL</div>
+        <div>
+          <div class="tcard-name">Paulo L.</div>
+          <div class="tcard-result">Massa muscular +6kg · Gordura eliminada de forma definitiva</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTRICAS -->
+<section class="section-proof">
+  <div>
+    <div class="sec-label">Números que importam</div>
+    <blockquote class="proof-q">
+      "Duas décadas de clínica. <span class="hl">Centenas de transformações</span> documentadas. Método que funciona."
+    </blockquote>
+    <div class="proof-attr">
+      <div class="proof-av">VF</div>
+      <div>
+        <div class="proof-name">Vitor Feitosa</div>
+        <div class="proof-role">Nutricionista Esportivo · Educador Físico · CRN + CREF Ativos</div>
+      </div>
+    </div>
+  </div>
+  <div class="metrics">
+    <div class="metric"><div class="mv">250<span style="font-size:24px">+</span></div><div class="ml">Avaliações 5 ★ Google</div></div>
+    <div class="metric"><div class="mv">20<span style="font-size:24px">+</span></div><div class="ml">Anos de Experiência</div></div>
+    <div class="metric lime-bg"><div class="mv">2em1</div><div class="ml">Nutrição + Ed. Física</div></div>
+    <div class="metric"><div class="mv">5</div><div class="ml">Etapas do Método</div></div>
+  </div>
+</section>
+
+<!-- LOCALIZAÇÃO -->
+<section class="section-local" id="contato">
+  <div>
+    <div class="sec-label">Onde nos encontrar</div>
+    <h2 class="local-title">ZONA NORTE<br>DE SÃO PAULO</h2>
+    <div class="local-address">
+      <strong>Av. Nova Cantareira, 2026 — Sala 113</strong>
+      Tucuruvi, São Paulo — SP<br>
+      Atendimento presencial e online<br><br>
+      WhatsApp: (11) 98458-5259
+    </div>
+    <div class="local-social">
+      <a class="social-pill" href="https://wa.me/5511984585259?text=Ol%C3%A1%20Vitor!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">WhatsApp</a>
+      <a class="social-pill" href="https://instagram.com/vitaofeitosa" target="_blank" rel="noopener">@vitaofeitosa</a>
+      <a class="social-pill" href="https://facebook.com/metodohercules" target="_blank" rel="noopener">Método Hércules</a>
+    </div>
+  </div>
+  <div class="map-placeholder">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.3!2d-46.6203!3d-23.4814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a!2sAv.%20Nova%20Cantareira%2C%202026%20-%20Tucuruvi%2C%20S%C3%A3o%20Paulo!5e0!3m2!1spt-BR!2sbr!4v1"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-cta">
+  <div class="cta-bg">SHAPE</div>
+  <div class="cta-tag">Próximo passo</div>
+  <h2 class="cta-title">PRONTO PARA<br>VER A MUDANÇA?</h2>
+  <p class="cta-sub">A primeira consulta dura <strong>1h30</strong>. Saímos com um plano concreto baseado em você — não em modelo pronto.</p>
+  <div class="cta-btns">
+    <a class="btn-p" href="https://wa.me/5511984585259?text=Ol%C3%A1%20Vitor!%20Quero%20agendar%20minha%20consulta%20de%201h30." target="_blank" rel="noopener" style="padding:17px 44px;font-size:12px">Agendar Minha Consulta</a>
+    <a class="btn-g" href="https://wa.me/5511984585259?text=Ol%C3%A1%20Vitor!%20Tenho%20algumas%20d%C3%BAvidas%20sobre%20seu%20trabalho." target="_blank" rel="noopener" style="padding:17px 32px;font-size:12px">Tirar Dúvidas</a>
+  </div>
+  <p class="cta-note">Atendimento presencial e online · Av. Nova Cantareira, 2026 — Sala 113, Tucuruvi, SP</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo" style="font-size:18px">VITOR<b>.</b>FEITOSA</div>
+  <p class="footer-copy">© 2025 · Nutricionista Esportivo · CRN + CREF Ativos · Zona Norte SP</p>
+  <ul class="footer-links">
+    <li><a href="https://instagram.com/vitaofeitosa" target="_blank" rel="noopener">Instagram</a></li>
+    <li><a href="https://wa.me/5511984585259" target="_blank" rel="noopener">WhatsApp</a></li>
+    <li><a href="https://facebook.com/metodohercules" target="_blank" rel="noopener">Facebook</a></li>
+  </ul>
+</footer>
