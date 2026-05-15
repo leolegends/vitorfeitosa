@@ -1,0 +1,284 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]: VITOR.FEITOSA
+    - list [ref=e4]:
+      - listitem [ref=e5]:
+        - link "MÃ©todo" [ref=e6] [cursor=pointer]:
+          - /url: "#metodo"
+      - listitem [ref=e7]:
+        - link "Para VocÃª" [ref=e8] [cursor=pointer]:
+          - /url: "#para-voce"
+      - listitem [ref=e9]:
+        - link "Resultados" [ref=e10] [cursor=pointer]:
+          - /url: "#resultados"
+      - listitem [ref=e11]:
+        - link "Contato" [ref=e12] [cursor=pointer]:
+          - /url: "#contato"
+    - link "Agendar Consulta" [ref=e13] [cursor=pointer]:
+      - /url: https://wa.me/5511984585259?text=Ol%C3%A1%20Vitor!%20Quero%20agendar%20minha%20consulta.
+  - generic [ref=e14]:
+    - generic [ref=e15]:
+      - generic [ref=e16]: Nutricionista Esportivo Â· 20 Anos
+      - 'heading "SEU SHAPE POSSÃVEL" [level=1] [ref=e17]':
+        - generic [ref=e18]: SEU
+        - generic [ref=e19]: SHAPE
+        - generic [ref=e20]: "POSSÃ\x8dVEL"
+      - paragraph [ref=e21]:
+        - text: Perda de gordura e ganho de massa com
+        - strong [ref=e22]: estratÃ©gia real
+        - text: â€” nÃ£o com dietas genÃ©ricas. SÃ³ atendo quem treina ou pretende treinar.
+      - generic [ref=e23]:
+        - link "Quero ComeÃ§ar" [ref=e24] [cursor=pointer]:
+          - /url: https://wa.me/5511984585259?text=Ol%C3%A1%20Vitor!%20Quero%20come%C3%A7ar%20meu%20acompanhamento%20nutricional.
+        - link "Ver Resultados" [ref=e25] [cursor=pointer]:
+          - /url: "#resultados"
+      - generic [ref=e26]:
+        - generic [ref=e27]:
+          - generic [ref=e28]: 20+
+          - generic [ref=e29]: Anos de AtuaÃ§Ã£o
+        - generic [ref=e30]:
+          - generic [ref=e31]: 250+
+          - generic [ref=e32]: AvaliaÃ§Ãµes Google
+        - generic [ref=e33]:
+          - generic [ref=e34]: 2em1
+          - generic [ref=e35]: NutriÃ§Ã£o + Ed. FÃsica
+    - generic [ref=e36]:
+      - img "Vitor Feitosa â€” Nutricionista Esportivo" [ref=e37]
+      - generic [ref=e39]:
+        - generic [ref=e40]: Especialista em
+        - generic [ref=e41]: NutriÃ§Ã£o Esportiva
+      - generic [ref=e42]:
+        - generic [ref=e43]: 20+
+        - generic [ref=e44]: Anos de ClÃnica
+      - generic [ref=e45]:
+        - generic [ref=e46]: "â\x905.0"
+        - generic [ref=e47]: 250+ AvaliaÃ§Ãµes
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - text: VITOR
+          - text: FEITOSA
+        - generic [ref=e52]:
+          - strong [ref=e53]: CRN + CREF Ativos
+          - text: Â· Nutricionista & Educador FÃsico
+  - generic [ref=e55]:
+    - generic [ref=e56]: â—† Perda de Gordura
+    - generic [ref=e57]: â—† Ganho de Massa
+    - generic [ref=e58]: â—† MÃ©todo HÃ©rcules
+    - generic [ref=e59]: â—† AvaliaÃ§Ã£o FÃsica Completa
+    - generic [ref=e60]: â—† Plano Alimentar Personalizado
+    - generic [ref=e61]: â—† SuplementaÃ§Ã£o Inteligente
+    - generic [ref=e62]: â—† PeriodizaÃ§Ã£o Nutricional
+    - generic [ref=e63]: â—† NutriÃ§Ã£o Esportiva
+    - generic [ref=e64]: â—† Perda de Gordura
+    - generic [ref=e65]: â—† Ganho de Massa
+    - generic [ref=e66]: â—† MÃ©todo HÃ©rcules
+    - generic [ref=e67]: â—† AvaliaÃ§Ã£o FÃsica Completa
+    - generic [ref=e68]: â—† Plano Alimentar Personalizado
+    - generic [ref=e69]: â—† SuplementaÃ§Ã£o Inteligente
+    - generic [ref=e70]: â—† PeriodizaÃ§Ã£o Nutricional
+    - generic [ref=e71]: â—† NutriÃ§Ã£o Esportiva
+  - generic [ref=e72]:
+    - generic [ref=e73]:
+      - generic [ref=e74]: VocÃª se identifica?
+      - heading "ESSES PROBLEMAS ACABAM AQUI" [level=2] [ref=e75]:
+        - text: ESSES
+        - text: PROBLEMAS
+        - emphasis [ref=e76]: ACABAM
+        - text: AQUI
+    - list [ref=e77]:
+      - listitem [ref=e78]:
+        - generic [ref=e79]: âœ•
+        - paragraph [ref=e80]:
+          - strong [ref=e81]: Treina pesado mas nÃ£o vÃª o mÃºsculo crescer.
+          - text: VocÃª se dedica na academia, mas o espelho nÃ£o mostra o esforÃ§o.
+      - listitem [ref=e82]:
+        - generic [ref=e83]: âœ•
+        - paragraph [ref=e84]:
+          - strong [ref=e85]: Gastou dinheiro em suplementos
+          - text: sem saber a hora certa de tomar ou se estÃ£o funcionando de verdade.
+      - listitem [ref=e86]:
+        - generic [ref=e87]: âœ•
+        - paragraph [ref=e88]:
+          - strong [ref=e89]: Quer perder gordura sem perder mÃºsculo.
+          - text: Esse equilÃbrio tem mÃ©todo â€” e Ã© exatamente o que fazemos.
+      - listitem [ref=e90]:
+        - generic [ref=e91]: âœ•
+        - paragraph [ref=e92]:
+          - strong [ref=e93]: Tenta se alimentar certo
+          - text: mas nÃ£o tem certeza se estÃ¡ no caminho correto para o seu objetivo especÃfico.
+  - generic [ref=e95]:
+    - generic [ref=e96]: Este atendimento Ã© para vocÃª seâ€¦
+    - heading "VOCÃŠ Ã‰ O PERFIL CERTO" [level=2] [ref=e97]:
+      - text: VOCÃŠ Ã‰ O
+      - emphasis [ref=e98]: PERFIL CERTO
+    - generic [ref=e99]:
+      - generic [ref=e100]:
+        - generic [ref=e101]: âœ“
+        - generic [ref=e102]: Treina na academia ou pretende comeÃ§ar a treinar
+      - generic [ref=e103]:
+        - generic [ref=e104]: âœ“
+        - generic [ref=e105]: Quer ganhar massa muscular com mÃ©todo e progressÃ£o real
+      - generic [ref=e106]:
+        - generic [ref=e107]: âœ“
+        - generic [ref=e108]: Busca perda de gordura sem sacrificar o mÃºsculo conquistado
+      - generic [ref=e109]:
+        - generic [ref=e110]: âœ“
+        - generic [ref=e111]: EstÃ¡ cansado de dietas genÃ©ricas que nÃ£o respeitam sua rotina
+      - generic [ref=e112]:
+        - generic [ref=e113]: âœ“
+        - generic [ref=e114]: Quer entender como usar suplementaÃ§Ã£o de forma inteligente
+      - generic [ref=e115]:
+        - generic [ref=e116]: âœ“
+        - generic [ref=e117]: Precisa de um plano que funcione junto com sua rotina de treino
+      - generic [ref=e118]:
+        - generic [ref=e119]: âœ“
+        - generic [ref=e120]: EstÃ¡ pronto para se comprometer com um processo sÃ©rio de transformaÃ§Ã£o
+  - generic [ref=e121]:
+    - generic [ref=e122]: Como funciona
+    - heading "MÃ‰TODO HÃ‰RCULES" [level=2] [ref=e123]
+    - paragraph [ref=e124]: 5 etapas estruturadas para uma transformaÃ§Ã£o sustentÃ¡vel
+    - generic [ref=e125]:
+      - generic [ref=e126]:
+        - generic [ref=e127]: "01"
+        - generic [ref=e128]: DiagnÃ³stico
+        - paragraph [ref=e129]: Conversa aprofundada sobre seus objetivos, hÃ¡bitos, histÃ³rico alimentar e treinos â€” antes de qualquer plano ser montado.
+      - generic [ref=e130]:
+        - generic [ref=e131]: "02"
+        - generic [ref=e132]: Entrevista Pessoal
+        - paragraph [ref=e133]: Mapeamento completo da sua rotina, preferÃªncias alimentares, restriÃ§Ãµes e estilo de vida para montar uma estratÃ©gia real.
+      - generic [ref=e134]:
+        - generic [ref=e135]: "03"
+        - generic [ref=e136]: AvaliaÃ§Ã£o FÃsica
+        - paragraph [ref=e137]: Consulta de 1h30 com avaliaÃ§Ã£o fÃsica completa. MÃ©tricas reais para uma estratÃ©gia real â€” sem chute, sem dieta pronta.
+      - generic [ref=e138]:
+        - generic [ref=e139]: "04"
+        - generic [ref=e140]: Plano Personalizado
+        - paragraph [ref=e141]: Plano alimentar montado sob medida para agir em sinergia com o seu treino. Zero dieta genÃ©rica copiada da internet.
+      - generic [ref=e142]:
+        - generic [ref=e143]: "05"
+        - generic [ref=e144]: AplicaÃ§Ã£o do MÃ©todo
+        - paragraph [ref=e145]: Acompanhamento contÃnuo, ajustes periÃ³dicos e suporte direto para garantir aderÃªncia e resultados progressivos.
+  - generic [ref=e146]:
+    - generic [ref=e147]:
+      - generic [ref=e148]:
+        - generic [ref=e149]: O que dizem os pacientes
+        - heading "RESULTADOS REAIS" [level=2] [ref=e150]:
+          - text: RESULTADOS
+          - text: REAIS
+      - generic [ref=e152]:
+        - generic [ref=e153]: â˜…â˜…â˜…â˜…â˜…
+        - generic [ref=e154]:
+          - strong [ref=e155]: 250+ AvaliaÃ§Ãµes
+          - text: 5 estrelas no Google
+    - generic [ref=e156]:
+      - generic [ref=e157]:
+        - paragraph [ref=e158]:
+          - text: "\"Finalmente alguÃ©m que"
+          - emphasis [ref=e159]: entendeu meu corpo
+          - text: e criou um plano que se encaixa na minha rotina. Resultados que nunca consegui antes em anos de academia."
+        - generic [ref=e160]:
+          - generic [ref=e161]: MC
+          - generic [ref=e162]:
+            - generic [ref=e163]: Marcos C.
+            - generic [ref=e164]: Perdeu 14kg em 4 meses Â· Ganhou 4kg de massa
+      - generic [ref=e165]:
+        - paragraph [ref=e166]:
+          - text: "\"Treino hÃ¡ anos e nunca consegui resultados tÃ£o consistentes. O Vitor entende de"
+          - emphasis [ref=e167]: treino e nutriÃ§Ã£o juntos
+          - text: â€” faz toda a diferenÃ§a na prÃ¡tica."
+        - generic [ref=e168]:
+          - generic [ref=e169]: RS
+          - generic [ref=e170]:
+            - generic [ref=e171]: Rodrigo S.
+            - generic [ref=e172]: Ganho muscular sustentÃ¡vel Â· Reduziu gordura corporal
+      - generic [ref=e173]:
+        - paragraph [ref=e174]:
+          - text: "\"Pensei que iria receber mais uma dieta restritiva. Recebi um"
+          - emphasis [ref=e175]: plano que faz sentido
+          - text: com minha vida, meus treinos e minha rotina real."
+        - generic [ref=e176]:
+          - generic [ref=e177]: AF
+          - generic [ref=e178]:
+            - generic [ref=e179]: Ana F.
+            - generic [ref=e180]: ComposiÃ§Ã£o corporal transformada em 6 meses
+      - generic [ref=e181]:
+        - paragraph [ref=e182]:
+          - text: "\"A avaliaÃ§Ã£o fÃsica completa me mostrou onde eu estava errando. Com o plano certo,"
+          - emphasis [ref=e183]: o resultado veio rÃ¡pido
+          - text: e de forma consistente."
+        - generic [ref=e184]:
+          - generic [ref=e185]: PL
+          - generic [ref=e186]:
+            - generic [ref=e187]: Paulo L.
+            - generic [ref=e188]: Massa muscular +6kg Â· Gordura eliminada de forma definitiva
+  - generic [ref=e189]:
+    - generic [ref=e190]:
+      - generic [ref=e191]: NÃºmeros que importam
+      - blockquote [ref=e192]: "\"Duas dÃ©cadas de clÃnica. Centenas de transformaÃ§Ãµes documentadas. MÃ©todo que funciona.\""
+      - generic [ref=e193]:
+        - generic [ref=e194]: VF
+        - generic [ref=e195]:
+          - generic [ref=e196]: Vitor Feitosa
+          - generic [ref=e197]: Nutricionista Esportivo Â· Educador FÃsico Â· CRN + CREF Ativos
+    - generic [ref=e198]:
+      - generic [ref=e199]:
+        - generic [ref=e200]: 250+
+        - generic [ref=e201]: AvaliaÃ§Ãµes 5 â˜… Google
+      - generic [ref=e202]:
+        - generic [ref=e203]: 20+
+        - generic [ref=e204]: Anos de ExperiÃªncia
+      - generic [ref=e205]:
+        - generic [ref=e206]: 2em1
+        - generic [ref=e207]: NutriÃ§Ã£o + Ed. FÃsica
+      - generic [ref=e208]:
+        - generic [ref=e209]: "5"
+        - generic [ref=e210]: Etapas do MÃ©todo
+  - generic [ref=e211]:
+    - generic [ref=e212]:
+      - generic [ref=e213]: Onde nos encontrar
+      - heading "ZONA NORTE DE SÃƒO PAULO" [level=2] [ref=e214]:
+        - text: ZONA NORTE
+        - text: DE SÃƒO PAULO
+      - generic [ref=e215]:
+        - strong [ref=e216]: Av. Nova Cantareira, 2026 â€” Sala 113
+        - text: Tucuruvi, SÃ£o Paulo â€” SP
+        - text: Atendimento presencial e online
+        - text: "WhatsApp: (11) 98458-5259"
+      - generic [ref=e217]:
+        - link "WhatsApp" [ref=e218] [cursor=pointer]:
+          - /url: https://wa.me/5511984585259?text=Ol%C3%A1%20Vitor!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.
+        - link "@vitaofeitosa" [ref=e219] [cursor=pointer]:
+          - /url: https://instagram.com/vitaofeitosa
+        - link "MÃ©todo HÃ©rcules" [ref=e220] [cursor=pointer]:
+          - /url: https://facebook.com/metodohercules
+    - iframe [ref=e222]:
+      
+  - generic [ref=e223]:
+    - generic: SHAPE
+    - generic [ref=e224]: PrÃ³ximo passo
+    - heading "PRONTO PARA VER A MUDANÃ‡A?" [level=2] [ref=e225]:
+      - text: PRONTO PARA
+      - text: VER A MUDANÃ‡A?
+    - paragraph [ref=e226]:
+      - text: A primeira consulta dura
+      - strong [ref=e227]: 1h30
+      - text: . SaÃmos com um plano concreto baseado em vocÃª â€” nÃ£o em modelo pronto.
+    - generic [ref=e228]:
+      - link "Agendar Minha Consulta" [ref=e229] [cursor=pointer]:
+        - /url: https://wa.me/5511984585259?text=Ol%C3%A1%20Vitor!%20Quero%20agendar%20minha%20consulta%20de%201h30.
+      - link "Tirar DÃºvidas" [ref=e230] [cursor=pointer]:
+        - /url: https://wa.me/5511984585259?text=Ol%C3%A1%20Vitor!%20Tenho%20algumas%20d%C3%BAvidas%20sobre%20seu%20trabalho.
+    - paragraph [ref=e231]: Atendimento presencial e online Â· Av. Nova Cantareira, 2026 â€” Sala 113, Tucuruvi, SP
+  - contentinfo [ref=e232]:
+    - generic [ref=e233]: VITOR.FEITOSA
+    - paragraph [ref=e234]: Â© 2025 Â· Nutricionista Esportivo Â· CRN + CREF Ativos Â· Zona Norte SP
+    - list [ref=e235]:
+      - listitem [ref=e236]:
+        - link "Instagram" [ref=e237] [cursor=pointer]:
+          - /url: https://instagram.com/vitaofeitosa
+      - listitem [ref=e238]:
+        - link "WhatsApp" [ref=e239] [cursor=pointer]:
+          - /url: https://wa.me/5511984585259
+      - listitem [ref=e240]:
+        - link "Facebook" [ref=e241] [cursor=pointer]:
+          - /url: https://facebook.com/metodohercules

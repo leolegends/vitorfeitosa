@@ -1,0 +1,245 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - link "Vitor Feitosa" [ref=e3] [cursor=pointer]:
+      - /url: "#hero"
+    - list [ref=e4]:
+      - listitem [ref=e5]:
+        - link "Sobre" [ref=e6] [cursor=pointer]:
+          - /url: "#about"
+      - listitem [ref=e7]:
+        - link "Para Você" [ref=e8] [cursor=pointer]:
+          - /url: "#qualifying"
+      - listitem [ref=e9]:
+        - link "Método" [ref=e10] [cursor=pointer]:
+          - /url: "#process"
+      - listitem [ref=e11]:
+        - link "Resultados" [ref=e12] [cursor=pointer]:
+          - /url: "#testimonials"
+      - listitem [ref=e13]:
+        - link "Quero Começar" [ref=e14] [cursor=pointer]:
+          - /url: https://wa.me/5511984585259?text=Ol%C3%A1%2C%20Vitor%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es.
+  - generic [ref=e15]:
+    - generic [ref=e17]:
+      - generic [ref=e18]: Nutricionista Esportivo · São Paulo
+      - heading "Ganhe Músculo de Verdade" [level=1] [ref=e19]:
+        - text: Ganhe
+        - emphasis [ref=e20]: Músculo
+        - text: de Verdade
+      - paragraph [ref=e21]: Chega de dietas genéricas e suplementos errados. Com 20 anos de experiência, desenvolvi um método que transforma treino em resultado real — sem perder o que você tem.
+      - generic [ref=e22]:
+        - link "Quero Mais Informações" [ref=e23] [cursor=pointer]:
+          - /url: https://wa.me/5511984585259?text=Ol%C3%A1%2C%20Vitor%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es.
+          - img [ref=e24]
+          - text: Quero Mais Informações
+        - link "Conhecer o Método" [ref=e27] [cursor=pointer]:
+          - /url: "#process"
+          - text: Conhecer o Método
+          - img [ref=e28]
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - generic [ref=e32]: 250+
+          - generic [ref=e33]: Avaliações 5★
+        - generic [ref=e34]:
+          - generic [ref=e35]: "20"
+          - generic [ref=e36]: Anos de Exp.
+        - generic [ref=e37]:
+          - generic [ref=e38]: 100%
+          - generic [ref=e39]: Personalizado
+    - img "Nutrição esportiva" [ref=e41]
+  - generic [ref=e44]:
+    - generic [ref=e45]:
+      - img "Vitor Feitosa Nutricionista" [ref=e46]
+      - generic [ref=e47]:
+        - text: 20 Anos
+        - text: de Experiência
+    - generic [ref=e48]:
+      - generic [ref=e49]: Quem é Vitor Feitosa
+      - heading "Nutricionista & Educador Físico" [level=2] [ref=e50]:
+        - text: Nutricionista
+        - text: "& Educador"
+        - text: Físico
+      - paragraph [ref=e52]: "Com duas décadas dedicadas à nutrição esportiva, desenvolvi um método proprietário que vai além do cardápio. A jornada começa com você: seus hábitos, sua rotina de treino e seus objetivos reais."
+      - paragraph [ref=e53]: Especialista em ganho de massa muscular e perda de gordura, minha abordagem integra avaliação física completa com um plano alimentar construído junto com você — para que funcione de verdade na sua vida.
+      - list [ref=e54]:
+        - listitem [ref=e55]: Nutricionista Esportivo credenciado
+        - listitem [ref=e56]: Educador Físico certificado
+        - listitem [ref=e57]: Especialista em hipertrofia e recomposição corporal
+        - listitem [ref=e58]: Método proprietário com resultados comprovados
+        - listitem [ref=e59]: Mais de 250 avaliações 5 estrelas no Google
+  - generic [ref=e61]:
+    - generic [ref=e62]:
+      - generic [ref=e63]: Esse atendimento é para você?
+      - heading "Reconhece Alguma Situação?" [level=2] [ref=e64]:
+        - text: Reconhece
+        - text: Alguma
+        - text: Situação?
+      - paragraph [ref=e66]: Se você se identificar com algum desses cenários, o método Hércules foi feito exatamente para o seu caso.
+    - generic [ref=e67]:
+      - generic [ref=e68]:
+        - generic [ref=e69]: "01"
+        - paragraph [ref=e70]: Quer ganhar massa muscular mas as tentativas por conta própria não deram resultado
+      - generic [ref=e71]:
+        - generic [ref=e72]: "02"
+        - paragraph [ref=e73]: Gastou dinheiro em suplementos sem saber ao certo o que realmente funciona para o seu corpo
+      - generic [ref=e74]:
+        - generic [ref=e75]: "03"
+        - paragraph [ref=e76]: Tem medo de que, ao tentar secar, vai perder toda a musculatura que você conquistou
+      - generic [ref=e77]:
+        - generic [ref=e78]: "04"
+        - paragraph [ref=e79]: Não sabe o que ou quando comer para potencializar os resultados do seu treino
+      - generic [ref=e80]:
+        - generic [ref=e81]: "05"
+        - paragraph [ref=e82]: Treina com seriedade e dedicação, mas os resultados simplesmente não aparecem
+      - generic [ref=e83]:
+        - generic [ref=e84]: "06"
+        - paragraph [ref=e85]: Quer um plano alimentar que caiba na sua rotina e nas suas preferências — sem sofrimento
+    - link "Me Identifico — Quero Informações" [ref=e87] [cursor=pointer]:
+      - /url: https://wa.me/5511984585259?text=Ol%C3%A1%2C%20Vitor%21%20Me%20identifiquei%20e%20quero%20saber%20mais.
+      - img [ref=e88]
+      - text: Me Identifico — Quero Informações
+  - generic [ref=e92]:
+    - generic [ref=e93]:
+      - generic [ref=e94]: Como funciona
+      - heading "O Método em 5 Etapas" [level=2] [ref=e95]:
+        - text: O Método
+        - text: em 5 Etapas
+    - generic [ref=e97]:
+      - generic [ref=e98]:
+        - generic [ref=e100]: "01"
+        - heading "Alinhamento de Metas" [level=3] [ref=e101]
+        - paragraph [ref=e102]: Conversa inicial para entender seus objetivos, definir a linha de base e traçar a estratégia certa para você.
+      - generic [ref=e103]:
+        - generic [ref=e105]: "02"
+        - heading "Entrevista Pessoal" [level=3] [ref=e106]
+        - paragraph [ref=e107]: "~1h30 de anamnese completa: hábitos, horários de refeição, rotina de treino e avaliação física detalhada."
+      - generic [ref=e108]:
+        - generic [ref=e110]: "03"
+        - heading "Avaliação Física" [level=3] [ref=e111]
+        - paragraph [ref=e112]: Bioimpedância + protocolo manual com adipômetro, balança digital e fita. Relatório impresso e digital.
+      - generic [ref=e113]:
+        - generic [ref=e115]: "04"
+        - heading "Plano Alimentar" [level=3] [ref=e116]
+        - paragraph [ref=e117]: Construído colaborativamente durante a consulta. Você sai com o plano em mãos, 100% personalizado.
+      - generic [ref=e118]:
+        - generic [ref=e120]: "05"
+        - heading "Acompanhamento" [level=3] [ref=e121]
+        - paragraph [ref=e122]: Acesso ao app por 30 dias com mensagens diretas para tirar dúvidas e garantir sua evolução.
+    - generic [ref=e123]:
+      - strong [ref=e124]: "Importante:"
+      - text: Atendo exclusivamente clientes que treinam ou que têm planos concretos de iniciar um treino. A estratégia nutricional é integrada ao seu programa de exercícios para maximizar os resultados.
+  - generic [ref=e126]:
+    - generic [ref=e127]:
+      - generic [ref=e128]: O que dizem os clientes
+      - heading "Resultados Reais" [level=2] [ref=e129]:
+        - text: Resultados
+        - text: Reais
+      - generic [ref=e131]:
+        - generic [ref=e132]:
+          - img [ref=e133]
+          - img [ref=e135]
+          - img [ref=e137]
+          - img [ref=e139]
+          - img [ref=e141]
+        - generic [ref=e143]: 250+ avaliações 5 estrelas no Google
+    - generic [ref=e144]:
+      - generic [ref=e145]:
+        - text: "\""
+        - generic [ref=e146]:
+          - img [ref=e147]
+          - img [ref=e149]
+          - img [ref=e151]
+          - img [ref=e153]
+          - img [ref=e155]
+        - paragraph [ref=e157]: "\"Treino há mais de 15 anos e o Vitor foi o melhor nutricionista que já tive. Os resultados que obtive com ele foram os melhores de toda a minha vida de treino.\""
+        - text: Leonardo Goltl
+      - generic [ref=e158]:
+        - text: "\""
+        - generic [ref=e159]:
+          - img [ref=e160]
+          - img [ref=e162]
+          - img [ref=e164]
+          - img [ref=e166]
+          - img [ref=e168]
+        - paragraph [ref=e170]: "\"A dieta é bem acessível, o atendimento é bem atencioso. Toda equipe é de fora de série, super indico para todos!\""
+        - text: Núbia Azevedo
+      - generic [ref=e171]:
+        - text: "\""
+        - generic [ref=e172]:
+          - img [ref=e173]
+          - img [ref=e175]
+          - img [ref=e177]
+          - img [ref=e179]
+          - img [ref=e181]
+        - paragraph [ref=e183]: "\"Medições e bioimpedância muito profissional. O acompanhamento é super personalizado e os resultados aparecem rápido.\""
+        - text: Caique Mendes
+      - generic [ref=e184]:
+        - text: "\""
+        - generic [ref=e185]:
+          - img [ref=e186]
+          - img [ref=e188]
+          - img [ref=e190]
+          - img [ref=e192]
+          - img [ref=e194]
+        - paragraph [ref=e196]: "\"Perdi 14kg em 4 meses sem passar fome e mantendo os alimentos que gosto. Resultado incrível!\""
+        - text: Lucas Carvalho
+  - generic [ref=e199]:
+    - generic [ref=e200]:
+      - generic [ref=e201]: Agende sua consulta
+      - heading "Vamos Conversar?" [level=2] [ref=e202]:
+        - text: Vamos
+        - text: Conversar?
+      - paragraph [ref=e204]: Envie uma mensagem no WhatsApp e tire todas as suas dúvidas. Atendimento na Zona Norte de São Paulo — Tucuruvi.
+      - list [ref=e205]:
+        - listitem [ref=e206]:
+          - img [ref=e208]
+          - generic [ref=e210]:
+            - generic [ref=e211]: WhatsApp
+            - link "(11) 98458-5259" [ref=e213] [cursor=pointer]:
+              - /url: https://wa.me/5511984585259
+        - listitem [ref=e214]:
+          - img [ref=e216]
+          - generic [ref=e219]:
+            - generic [ref=e220]: Endereço
+            - generic [ref=e221]:
+              - text: Av. Nova Cantareira, 2026 — Sala 113
+              - text: Tucuruvi, São Paulo — Zona Norte
+        - listitem [ref=e222]:
+          - img [ref=e224]
+          - generic [ref=e227]:
+            - generic [ref=e228]: Instagram
+            - link "@vitaofeitosa" [ref=e230] [cursor=pointer]:
+              - /url: https://instagram.com/vitaofeitosa
+        - listitem [ref=e231]:
+          - img [ref=e233]
+          - generic [ref=e235]:
+            - generic [ref=e236]: Facebook
+            - link "/metodohercules" [ref=e238] [cursor=pointer]:
+              - /url: https://facebook.com/metodohercules
+      - link "Agendar pelo WhatsApp" [ref=e239] [cursor=pointer]:
+        - /url: https://wa.me/5511984585259?text=Ol%C3%A1%2C%20Vitor%21%20Gostaria%20de%20agendar%20uma%20consulta.
+        - img [ref=e240]
+        - text: Agendar pelo WhatsApp
+    - generic [ref=e243]:
+      - generic [ref=e244]: Tucuruvi · São Paulo · Zona Norte
+      - iframe [ref=e245]:
+        
+  - contentinfo [ref=e246]:
+    - link "Vitor Feitosa" [ref=e247] [cursor=pointer]:
+      - /url: "#hero"
+    - list [ref=e248]:
+      - listitem [ref=e249]:
+        - link "Sobre" [ref=e250] [cursor=pointer]:
+          - /url: "#about"
+      - listitem [ref=e251]:
+        - link "Método" [ref=e252] [cursor=pointer]:
+          - /url: "#process"
+      - listitem [ref=e253]:
+        - link "Resultados" [ref=e254] [cursor=pointer]:
+          - /url: "#testimonials"
+      - listitem [ref=e255]:
+        - link "Contato" [ref=e256] [cursor=pointer]:
+          - /url: "#contact"
+    - paragraph [ref=e257]: © 2024 Vitor Feitosa Nutricionista · Tucuruvi, São Paulo
+  - link "Contato WhatsApp" [ref=e258] [cursor=pointer]:
+    - /url: https://wa.me/5511984585259?text=Ol%C3%A1%2C%20Vitor%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es.
+    - img [ref=e259]
